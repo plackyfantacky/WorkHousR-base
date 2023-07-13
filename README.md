@@ -1,4 +1,4 @@
-# WorkHousR #
+# WorkHousR-base #
 ### A quick and dirty Laravel demo app ###
 
 This is just a simple Laravel 10 bundle with a few bells and whistles to make scafolding new apps simpler. I built this mainly for myself as part of applying for a job. I've intentionally kept it generic so I can re-use it in the future.
