@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/**
+ * Listings
+ * 
+ * GET /api/v1/listings
+ * GET /api/v1/listings/{id?}
+ * GET /api/v1/listings?
+ * - name
+ * - price
+ * - bedrooms
+ * - bathrooms
+ * - storeys
+ * - garages
+ * 
+ * and with LengthAwarePaginator...
+ *
+ * - page 
+ */
+
+Route::get('/v1/listings', [ListingsController::class, 'getListings']);
+Route::get('/v1/listings/{id}', [ListingsController::class, 'viewListing']);
