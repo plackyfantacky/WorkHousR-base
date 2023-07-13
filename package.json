@@ -1,0 +1,42 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build"
+	},
+	"name": "workhousehousr",
+	"description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\" alt=\"Laravel Logo\"></a></p>",
+	"version": "0.0.1",
+	"main": "./resources/js/index.js",
+	"directories": {
+		"test": "tests"
+	},
+	"author": "Adam Trickett",
+	"license": "MIT",
+	"prettier": {
+		"bracketSameLine": true,
+		"singleQuote": false,
+		"trailingComma": "none",
+		"jsxSingleQuote": false,
+		"useTabs": true,
+		"arrowParens": "always",
+		"bracketSpacing": false,
+		"singleAttributePerLine": true
+	},
+	"devDependencies": {
+		"@headlessui/react": "^1.7.15",
+		"@iconify/react": "^4.1.1",
+		"@inertiajs/react": "^1.0.9",
+		"@tailwindcss/forms": "^0.5.3",
+		"@tailwindcss/typography": "^0.5.9",
+		"@vitejs/plugin-react": "^4.0.3",
+		"autoprefixer": "^10.4.14",
+		"axios": "^1.1.2",
+		"laravel-vite-plugin": "^0.7.8",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tailwindcss": "^3.3.2",
+		"vite": "^4.4.3"
+	}
+}
