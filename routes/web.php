@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ListingsController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,6 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Listings/Index');
 })->name('listings.index');
+
+//this is my preferred method pulling in the listing data
+Route::get('/{id}', [ListingsController::class, 'viewListing'])->name('listings.view');

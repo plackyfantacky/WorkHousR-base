@@ -34,4 +34,5 @@ use App\Http\Controllers\ListingsController;
  */
 
 Route::get('/v1/listings', [ListingsController::class, 'getListings']);
-Route::get('/v1/listings/{id}', [ListingsController::class, 'viewListing']);
+Route::get('/v1/listings/{id}', [ListingsController::class,  'getListing'])->where('id', '[0-9]+');
+Route::get('/v1/listings/values', [ListingsController::class, 'getMinMaxAndDistinctValues']);

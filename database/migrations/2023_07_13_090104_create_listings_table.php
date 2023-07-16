@@ -23,6 +23,7 @@ return new class extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->string('name', 32);
+            $table->string('address', 255);
             $table->integer('price');
             $table->integer('bedrooms');
             $table->integer('bathrooms');

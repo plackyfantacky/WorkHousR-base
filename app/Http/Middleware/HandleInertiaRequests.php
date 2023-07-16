@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use App\Models\Listings;
+use App\Http\Controllers\ListingsController;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -36,8 +38,9 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        //i'm avoiding relying this as in the spirit of the assessment I need to retrieve data via AJAX. just using this for debugging for now.
         return array_merge(parent::share($request), [
-            //
+            
         ]);
     }
 }

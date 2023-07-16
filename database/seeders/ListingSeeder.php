@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
 use App\Models\Listings;
 
+
 class ListingSeeder extends Seeder
 {
     /**
@@ -53,7 +54,7 @@ class ListingSeeder extends Seeder
                     'image' => $data[6]
                 );
 
-                Listings::create($listing);
+                Listings::factory()->create($listing);
 
                 return $listing;
             });
