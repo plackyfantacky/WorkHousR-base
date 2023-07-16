@@ -1,10 +1,14 @@
 import './bootstrap'
+import '../css/app.css'
 
 import React from "react"
+//import { RecoilRoot, RecoilEnv } from 'recoil'
 
 import { createRoot } from 'react-dom/client'
 import { createInertiaApp } from '@inertiajs/react'
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
+
+//RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText
 
@@ -14,7 +18,9 @@ createInertiaApp({
     setup({ el, App, props }) {
         const root = createRoot(el);
         root.render(
-            <App {...props} />
+            // <RecoilRoot>
+                <App {...props} />
+            //</RecoilRoot>
         )
     }
 })
